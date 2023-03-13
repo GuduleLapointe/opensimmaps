@@ -520,7 +520,9 @@ function getRegionInfos(x,y){
         var portstring = "";
         var portstring2 = "";
         if (port80 == 1) {portstring = ":"+portnumber; portstring2 = "|"+portnumber;}
-        response+="<tr><td><a class=\"add\" href=\"secondlife://"+hgdomains[map.getMapTypeId()]+portstring+":"+xmlregionname+"/"+xjump+"/"+yjump+"/\">Hypergrid</a>&nbsp;&nbsp;</td>";
+        response+="<tr>";
+        response+="<td><a class=\"add\" href=\"hop://"+hgdomains[map.getMapTypeId()]+portstring+"/"+xmlregionname+"/"+xjump+"/"+yjump+"/\">Hop</a>&nbsp;&nbsp;</td>";
+        response+="<td><a class=\"add\" href=\"secondlife://"+hgdomains[map.getMapTypeId()]+portstring+":"+xmlregionname+"/"+xjump+"/"+yjump+"/\">Hypergrid</a>&nbsp;&nbsp;</td>";
         xmlregionname = xmlregionname.replace(" ","+"); // fix for V3 HG URL
         response+="<td><a class=\"add\" href=\"secondlife://http|!!"+hgdomains[map.getMapTypeId()]+portstring+"+"+xmlregionname+"\">V3 HG</a>&nbsp;&nbsp;</td>";
         xmlregionname = xmlregionname.replace("+"," "); // change back for local URL
