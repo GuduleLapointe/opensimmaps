@@ -13,7 +13,7 @@ require_once("../class-mysql.php");
 $dom = new DomDocument('1.0', "UTF-8");
 $map = $dom->appendChild($dom->createElement('Map'));
 
-$DbLink = new DB(OPENSIM_DB_HOST, OPENSIM_DB_NAME, OPENSIM_DB_USER, OPENSIM_DB_PASS, OPENSIM_DB_MYSQLI);
+$DbLink = new DB(OPENSIM_DB_HOST, OPENSIM_DB_NAME, OPENSIM_DB_USER, OPENSIM_DB_PASS );
 $DbLink->query("SELECT uuid,regionName,locX,locY,sizeX,sizeY FROM regions");
 
 while(list($UUID,$regionName,$locX,$locY,$dbsizeX,$dbsizeY) = $DbLink->next_record())

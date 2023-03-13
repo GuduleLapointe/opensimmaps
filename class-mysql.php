@@ -23,7 +23,7 @@ class DB {
 	var $UseMySQLi = false;
 	var $Timeout;                 // not implement yet
 
-	function DB( $dbhost = null, $dbname = null, $dbuser = null, $dbpass = null, $usemysqli = false, $timeout = 60 ) {
+	function DB( $dbhost = null, $dbname = null, $dbuser = null, $dbpass = null, $usemysqli = true, $timeout = 60 ) {
 		$this->Host     = $dbhost;
 		$this->Database = $dbname;
 		$this->User     = $dbuser;
