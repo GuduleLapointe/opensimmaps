@@ -1,14 +1,31 @@
 # OpenSimMaps (standalone)
 
-The map tool for OpenSimulator, to display the grid map on a website, for
+The web map tool for OpenSimulator, for
 
 - standalone use
-- integration with [Flexible Helper Scripts](https://github.com/GuduleLapointe/flexible_helper_scripts)
-- (upcoming) integration with [w4os WordPress Interface for OpenSimulator](https://w4os.org)
+- or integration with
 
-This is a modified version of hawddamor/opensimmaps. The modifcations from the original project are only related to file locations and some variable names. If you use OpenSim Redux web interface, it might be better to stick with hawddamor's version.
+  - [Flexible Helper Scripts](https://github.com/GuduleLapointe/flexible_helper_scripts)
+  - legacy OpenSimWiRedux
+  - (upcoming) [w4os WordPress Interface for OpenSimulator](https://w4os.org)
 
 - Support this project: <https://magiiic.com/support/OpenSimMaps>
+
+## Features
+
+- show grid map with region maptiles
+- click to get a choice of teleport methods
+- supports varregions
+- supports multiple maps
+- uses Google Maps v3 API
+
+### New
+
+- allow standalone use: include minimal settings, independant to other helpers or web interface
+- include settings for integration with Flexible Helper Scripts
+- separate settings file from the rest of the code: one for php (config.php), one for javascript (config.js)
+- distribution non contains only example settings file, to alow smooth update without losing config
+- added hop:// to teleport link choices
 
 ## Installation
 
@@ -35,5 +52,7 @@ This is a modified version of hawddamor/opensimmaps. The modifcations from the o
 ## Credits
 
 Based on [hawddamor's opensimmaps](https://github.com/hawddamor/opensimmaps) (optimized for OpenSim Redux web interface).
+
+This is a modified version of hawddamor/opensimmaps. The modifcations from the original project are only related to file locations and some variable names. If you use OpenSim Redux web interface, it might be better to stick with hawddamor's version.
 
 More information on original project and authors in README and LICENSE files.
