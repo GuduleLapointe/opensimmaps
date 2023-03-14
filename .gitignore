@@ -2,3 +2,5 @@ config.php
 data/regions
 url.js
 config.js
+*~
+#*#
