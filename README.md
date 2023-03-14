@@ -9,7 +9,7 @@ The web map tool for OpenSimulator, for
   - legacy OpenSimWiRedux
   - (upcoming) [w4os WordPress Interface for OpenSimulator](https://w4os.org)
 
-- Support this project: <https://magiiic.com/support/OpenSimMaps>
+Support this project: <https://magiiic.com/support/OpenSimMaps>
 
 ## Features
 
