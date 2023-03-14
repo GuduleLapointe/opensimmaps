@@ -3,10 +3,28 @@
  * Minimum configuration file for use with opensimmaps only.
  */
 
-// MySQL DB access information
+/*
+ * To use this module alone, set your OpenSim database credentials below.
+ *
+ * To use as part of a collection or helpers or a Web Interface like OpenSim
+ * Redux or Flexible Helper Scripts, comment de following lines and uncomment
+ * the corresponding lines below.
+ */
+
 define( 'OPENSIM_DB_HOST', 'localhost' );
 define( 'OPENSIM_DB_NAME', 'opensim' );
 define( 'OPENSIM_DB_USER', 'opensimuser' );
 define( 'OPENSIM_DB_PASS', 'opensimpass' );
-
 // define('OPENSIM_DB_MYSQLI', false);	// deprecated, MySQLi enabled by default
+
+/**
+ * To use with Flexible Helper Scripts
+ */
+// require_once("../helpers/config/config.php");
+// require_once("../helpers/opensim.phplib/mysql.func.php");
+
+/**
+ * To use with OpenSim Redux web interface
+ */
+// include("../../settings/config.php");
+// include("../../settings/mysql.php");

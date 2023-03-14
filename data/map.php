@@ -3,11 +3,8 @@
  * map.php for use with Flexible Helper Scripts or w4os.
  */
 
-// For use with Flexible Helpers script, adjust to actual config files location
 require_once '../config.php';
 require_once '../class-mysql.php';
-// require_once("../../helpers/config/config.php");
-// require_once("../../helpers/opensim.phplib/mysql.func.php");
 
 // Creates XML string and XML document using the DOM
 $dom = new DomDocument( '1.0', 'UTF-8' );
@@ -15,7 +12,14 @@ $map = $dom->appendChild( $dom->createElement( 'Map' ) );
 
 if(! defined('OPENSIM_DB_MYSQLI')) define('OPENSIM_DB_MYSQLI', true); // use MySQLi unless defined in config.php
 
-$DbLink = new DB( OPENSIM_DB_HOST, OPENSIM_DB_NAME, OPENSIM_DB_USER, OPENSIM_DB_PASS, OPENSIM_DB_MYSQLI );
+if(defined('OPENSIM_DB_HOST')) {
+	$DbLink = new DB( OPENSIM_DB_HOST, OPENSIM_DB_NAME, OPENSIM_DB_USER, OPENSIM_DB_PASS, OPENSIM_DB_MYSQLI );
+} else if(defined('C_DB_HOST')) {
+	$DbLink = new DB;
+} else {
+	error_log(__FILE__ . ' Missing configuration');
+	exit;
+}
 $DbLink->query( 'SELECT uuid,regionName,locX,locY,sizeX,sizeY FROM regions' );
 
 while ( list($UUID,$regionName,$locX,$locY,$dbsizeX,$dbsizeY) = $DbLink->next_record() ) {
