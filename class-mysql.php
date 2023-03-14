@@ -23,7 +23,7 @@ class DB {
 	var $UseMySQLi = false;
 	var $Timeout;                 // not implement yet
 
-	function DB( $dbhost = null, $dbname = null, $dbuser = null, $dbpass = null, $usemysqli = true, $timeout = 60 ) {
+	function __construct( $dbhost = null, $dbname = null, $dbuser = null, $dbpass = null, $usemysqli = true, $timeout = 60 ) {
 		$this->Host     = $dbhost;
 		$this->Database = $dbname;
 		$this->User     = $dbuser;
@@ -50,7 +50,7 @@ class DB {
 
 	function connect() {
 		if ( $this->Link_ID == null ) {
-			if ( ! $this->UseMySQLi ) {
+			if ( $this->UseMySQLi !== true ) {
 				$this->Link_ID = mysql_connect( $this->Host, $this->User, $this->Password );
 				if ( ! $this->Link_ID ) {
 					$this->Errno = 999;

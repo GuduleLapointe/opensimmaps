@@ -8,3 +8,5 @@ define( 'OPENSIM_DB_HOST', 'localhost' );
 define( 'OPENSIM_DB_NAME', 'opensim' );
 define( 'OPENSIM_DB_USER', 'opensimuser' );
 define( 'OPENSIM_DB_PASS', 'opensimpass' );
+
+// define('OPENSIM_DB_MYSQLI', false);	// deprecated, MySQLi enabled by default
