@@ -1,0 +1,86 @@
+/**
+ * Configuration for OpenSimMaps engie javascript.
+ *
+ * Rename as config.js and adjust paramente for your grid.
+ *
+ * Must be loaded before map-engine.js.
+ */
+
+var defaultMap = 'world1'; // must be in the lists below, usually the first
+
+// Note that the index labels, e.g. "world1", "world2" etc MUST be the same in each section where they appear,
+// so it is recommended that you use this indexing pattern, e.g. add "world3", "world4" etc as necessary.
+// Note that you will need local copies of the maptiles or be able to make (soft) links to those in [opensim]/bin/maptiles
+// but if you use local copies you will need to update them manually or otherwise. See also the filename setting below.
+
+var xlocations = {
+  "world1": 10000, // primary map centre location (x)
+  // "world2": 5000, // secondary map centre location (x)
+  // ... add more lines as required, separated by commas
+};
+
+var ylocations = {
+  "world1": 10000, // primary map centre location (y)
+  // "world2": 5000, // secondary map centre location (y)
+  // ... add more lines as required, separated by commas, same index labels as above
+};
+
+// ## This is especially useful for large regions e.g. varregions ##
+var xoffsets = { // if required: default is zero
+  "world1": 0, // primary offset (number of tiles) SE from centre (x)
+  //"world2": 0, // secondary offset (number of tiles) SE from centre (x)
+  // ... add more lines as required, separated by commas
+};
+
+// ## This is especially useful for large regions e.g. varregions ##
+var yoffsets = { // if required: default is zero
+  "world1": 0, // primary offset (number of tiles) SE from centre (y)
+  //"world2": 0, // secondary offset (number of tiles) SE from centre (y)
+  // ... add more lines as required, separated by commas, same index labels as above
+};
+
+// initial zoom level (make sure 5 <= zoomStart <= 9): for small grids, try 8; for large grids, try 6
+var zoomStart;
+var zoomStarts = {
+  "world1": 8, // primary zoom start level
+  //"world2": 8, // secondary zoom start level
+  // ... add more lines as required, separated by commas
+};
+
+var mapCentreNames = [ // these will appear on the map control buttons, e.g. names of worlds or arbitrary labels
+  "Your Grid", // primary map centre name of choice
+  // "Other Grid", // secondary map centre name of choice
+  // ... add more lines as required, separated by commas
+];
+
+var copyrightNotices = [ // these may be different for each map, e.g. if for multiple worlds
+  "Your Grid", // primary copyright notice
+  // "Your Other Grid", // secondary copyright notice
+  // ... add more lines as required, separated by commas
+];
+
+var hgdomains = { // these may be different for each map, e.g. if for multiple worlds
+  "world1": "yourgrid.org", // primary hypergrid domain
+  // "world2": "otherworld.example.com", // secondary hypergrid domain
+  // .. add more lines as required, separated by commas
+};
+
+var hgports = { // these may be different for each map, e.g. if for multiple worlds
+  "world1": "8002", // primary hypergrid port
+  // "world2": "9000", // secondary hypergrid port
+  // ... add more lines as required, separated by commas
+};
+
+var port80 = 1; // Where default port 80 is specified, include explicitly in link (boolean).
+
+var copyrightStartYear = 2012;
+var copyrightEndYear = 0; // 0 = current year, -1 = no end year
+
+// ########## DON'T USUALLY CHANGE THIS ##########
+// This setting determines the names of the jpg files. They can be the UUIDs of the regions, or the format
+// used in [opensim]/bin/maptiles or, though not sure you'd want this, UUIDs with dashes removed. This is left
+// in to enable compatibility with the v2 code but it is better to use the proper UUID format with dashes retained.
+
+var filenames = "from-files"; // default is "from-files", otherwise use "from-server", "uuid" or "uuid-no-dashes"
+
+var showUUID = "false"; // Default is "false", setting to "true" will show the region UUID in the infoWindow
