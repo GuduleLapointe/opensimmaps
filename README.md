@@ -1,11 +1,14 @@
-# OpenSimMaps for Flexible Helper Scripts
+# OpenSimMaps (standalone)
 
-This is a fork of [hawddamor's opensimmaps](https://github.com/hawddamor/opensimmaps) for integration with
+The map tool for OpenSimulator, to display the grid map on a website, for
 
-- [Flexible Helper Scripts](https://github.com/GuduleLapointe/flexible_helper_scripts)
-- and [w4os WordPress Interface for OpenSimulator](https://w4os.org).
+- standalone use
+- integration with [Flexible Helper Scripts](https://github.com/GuduleLapointe/flexible_helper_scripts)
+- (upcoming) integration with [w4os WordPress Interface for OpenSimulator](https://w4os.org)
 
-There are very few changes, mainly related to config file locations.
+This is a modified version of hawddamor/opensimmaps. The modifcations from the original project are only related to file locations and some variable names. If you use OpenSim Redux web interface, it might be better to stick with hawddamor's version.
+
+- Support this project: <https://magiiic.com/support/OpenSimMaps>
 
 ## Installation
 
@@ -14,7 +17,7 @@ There are very few changes, mainly related to config file locations.
 - Copy `config.js.example` as `config.js` and adjust settings (particularly xlocations, ylocations, mapcenternames, hgdomains and hgports)
 - make a soft link from the OpenSim maptile/00000000-0000-0000-0000-000000000000 folder to data/regions/, for example on linux (adjust to your setup):
 
-  ```
+  ```bash
   ln -s /opt/opensim-0.9.2.0/bin/maptiles/00000000-0000-0000-0000-000000000000 /var/html/opensimmaps/data/regions
   ```
 
@@ -30,5 +33,7 @@ There are very few changes, mainly related to config file locations.
   ```
 
 ## Credits
+
+Based on [hawddamor's opensimmaps](https://github.com/hawddamor/opensimmaps) (optimized for OpenSim Redux web interface).
 
 More information on original project and authors in README and LICENSE files.
