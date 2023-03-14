@@ -53,6 +53,6 @@ The web map tool for OpenSimulator, for
 
 Based on [hawddamor's opensimmaps](https://github.com/hawddamor/opensimmaps) (optimized for OpenSim Redux web interface).
 
-This is a modified version of hawddamor/opensimmaps. The modifcations from the original project are only related to file locations and some variable names. If you use OpenSim Redux web interface, it might be better to stick with hawddamor's version.
+This is a modified version of hawddamor/opensimmaps. The modifications from the original project are mainly related to file locations and some variable names.
 
 More information on original project and authors in README and LICENSE files.
