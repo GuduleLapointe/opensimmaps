@@ -4,7 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <title>World Map</title>
   <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyBACCLjQjfliUdoyI90ZS5HNf7M22TYORI"></script>
-  <script type="text/javascript" src="url.js?build=17"></script>
+  <script type="text/javascript" src="url.js?build=23"></script>
   <script type="text/javascript" src="copyright.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css" />
 
