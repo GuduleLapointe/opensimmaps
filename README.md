@@ -24,8 +24,14 @@ Support this project: <https://magiiic.com/support/OpenSimMaps>
 - allow standalone use: include minimal settings, independant to other helpers or web interface
 - include settings for integration with Flexible Helper Scripts
 - separate settings file from the rest of the code: one for php (config.php), one for javascript (config.js)
-- distribution non contains only example settings file, to alow smooth update without losing config
+- distribution now contains only example settings file, to alow smooth update without losing config
 - added hop:// to teleport link choices
+
+### TODO
+
+- remove old API key probably belonging to one of the original developers
+- ... and many other things whose details would be laborious (so much to do, so little time)
+- please use [issues](https://github.com/GuduleLapointe/opensimmaps/issues) to request new features or report bugs
 
 ## Installation
 
